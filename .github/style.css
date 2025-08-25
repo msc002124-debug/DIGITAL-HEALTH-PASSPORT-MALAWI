@@ -1,0 +1,145 @@
+/* General Styling */
+* { box-sizing: border-box; }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f8fb;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  line-height: 1.5;
+}
+
+header {
+  background: linear-gradient(rgba(0, 119, 204, 0.75), rgba(0, 95, 163, 0.75)),
+              url("assets/OIP.webp.jpg") no-repeat center center/cover;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+header h1 {
+  margin: 0;
+  font-size: 2.6rem;
+}
+header p {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  opacity: 0.95;
+}
+
+nav {
+  background: #005fa3;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 14px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: opacity 0.2s ease;
+}
+nav a:hover { opacity: 0.85; }
+nav .spacer { flex: 1; }
+nav .cta {
+  background: #0aa2ff;
+  padding: 8px 14px;
+  border-radius: 999px;
+}
+nav .cta.outline {
+  background: transparent;
+  border: 2px solid #0aa2ff;
+}
+
+section {
+  max-width: 960px;
+  margin: 28px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+section h2 {
+  color: #0077cc;
+  margin-top: 0;
+}
+
+/* Patient Form */
+form {
+  display: grid;
+  gap: 14px;
+}
+label { font-weight: 700; }
+input, select {
+  padding: 10px;
+  border: 1px solid #cfd6dd;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+}
+input:focus, select:focus { border-color: #0077cc; }
+button {
+  padding: 12px;
+  background: #0077cc;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  width: fit-content;
+}
+button:hover { background: #005fa3; }
+
+footer {
+  background: #0077cc;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  margin-top: 24px;
+}
+
+/* Fullscreen auth layout */
+.fullscreen {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  background: linear-gradient(rgba(0, 119, 204, 0.4), rgba(0, 95, 163, 0.6)),
+              url("assets/OIP.webp") no-repeat center center/cover;
+}
+.auth-card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 28px;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+  width: 100%;
+  max-width: 420px;
+}
+.auth-card h2 {
+  text-align: center;
+  margin: 0 0 16px 0;
+  color: #333;
+}
+.auth-card p {
+  text-align: center;
+  margin-top: 10px;
+}
+.auth-card a {
+  color: #0077cc;
+  text-decoration: none;
+  font-weight: 700;
+}
+.auth-card a:hover { text-decoration: underline; }
+
+/* Responsive */
+@media (max-width: 600px) {
+  nav { flex-wrap: wrap; gap: 10px; }
+  nav .spacer { display: none; }
+  nav .cta, nav .cta.outline { padding: 6px 10px; }
+  section { margin: 16px; }
+}
